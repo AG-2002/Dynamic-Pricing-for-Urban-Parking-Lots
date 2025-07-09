@@ -326,8 +326,8 @@ pytest tests/test_models.py::test_linear_model -v
 ## 📧 Contact
 
 Your Name - Aishi Guin 
-email - guinaishi@gmail.com
-Project Link: https://github.com/yourusername/dynamic-parking-pricing
+Email - guinaishi@gmail.com
+Project Link: https://github.com/AG-2002/Dynamic-Pricing-for-Urban-Parking-Lots/tree/main
 
 ---
 
