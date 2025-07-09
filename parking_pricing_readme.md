@@ -245,6 +245,7 @@ Price = BasePrice * (1 + λ * NormalizedDemand)
 
 ###  Model 3: Competitive Pricing Model
 - Adds geolocation logic (via Haversine distance)
+- Price(t+1) = α × (Competitor Average Price) + (1 - α) × (Previous Price)
 
 ##  Performance Metrics
 
