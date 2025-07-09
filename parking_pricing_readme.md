@@ -182,47 +182,6 @@ cp src/config/settings.example.py src/config/settings.py
 python src/utils/init_db.py
 ```
 
-## 💻 Usage
-
-### Running the Models
-
-**Model 1: Linear Baseline**
-```python
-from src.models.linear_model import LinearPricingModel
-
-model = LinearPricingModel()
-price = model.calculate_price(current_price=10.0, occupancy=0.8, capacity=100)
-```
-
-**Model 2: Demand-Based**
-```python
-from src.models.demand_model import DemandPricingModel
-
-model = DemandPricingModel()
-features = {
-    'occupancy': 0.8,
-    'capacity': 100,
-    'queue_length': 5,
-    'traffic_level': 0.6,
-    'is_special_day': True,
-    'vehicle_type_weight': 1.2
-}
-price = model.calculate_price(base_price=10.0, features=features)
-```
-
-**Model 3: Competitive**
-```python
-from src.models.competitive_model import CompetitivePricingModel
-
-model = CompetitivePricingModel()
-price = model.calculate_price(
-    base_price=10.0,
-    location=(lat, lon),
-    competitor_data=competitor_prices,
-    occupancy_status=0.9
-)
-```
-
 ### API Endpoints
 
 Start the API server:
