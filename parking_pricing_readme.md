@@ -316,9 +316,6 @@ pytest tests/test_models.py::test_linear_model -v
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -328,7 +325,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Your Name - Aishi Guin 
+email - guinaishi@gmail.com
 Project Link: https://github.com/yourusername/dynamic-parking-pricing
 
 ---
