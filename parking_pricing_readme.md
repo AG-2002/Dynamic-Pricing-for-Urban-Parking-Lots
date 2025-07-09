@@ -2,7 +2,7 @@
 
 A sophisticated machine learning-driven parking pricing system that dynamically adjusts prices based on real-time demand, occupancy, and competitive analysis.
 
-## 🚗 Overview
+##  Overview
 
 This project implements three distinct pricing models to optimize parking lot revenue while maintaining customer satisfaction:
 
@@ -10,7 +10,7 @@ This project implements three distinct pricing models to optimize parking lot re
 2. **Demand-Based Price Function** - Advanced multi-factor pricing algorithm
 3. **Competitive Pricing Model** - Location-aware competitive pricing strategy
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Core Technologies
 - **Python 3.8+** - Primary programming language
@@ -34,7 +34,7 @@ This project implements three distinct pricing models to optimize parking lot re
 - **JSON** - Configuration and data serialization
 - **Logging** - System monitoring and debugging
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -51,7 +51,7 @@ This project implements three distinct pricing models to optimize parking lot re
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-## 📊 Model Architecture
+## Model Architecture
 
 ### Model 1: Baseline Linear Model
 ```python
@@ -86,7 +86,7 @@ CompetitivePrice = f(BasePrice, CompetitorPrices, GeographicProximity, Occupancy
 - Intelligent rerouting suggestions
 - Dynamic competitive positioning
 
-## 🔄 System Flow
+##  System Flow
 
 ```mermaid
 graph TD
@@ -111,7 +111,7 @@ graph TD
     K --> N[Analytics Dashboard]
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 dynamic-parking-pricing/
@@ -144,7 +144,7 @@ dynamic-parking-pricing/
 └── README.md
 ```
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 ```bash
@@ -203,7 +203,7 @@ curl -X POST "http://localhost:8000/price" \
     "vehicle_type": "car"
   }'
 ```
-## 📌 Problem Statement
+##  Problem Statement
 Urban parking is limited and static pricing often causes underutilization or 
 overcrowding. The objective is to implement a **dynamic pricing engine** for 14 p
 lots using streaming data to:
@@ -213,9 +213,9 @@ lots using streaming data to:
 
 ---
 
-## 🧠 Models Implemented
+##  Models Implemented
 
-### 🔵 Model 1: Baseline Linear Model
+### Model 1: Baseline Linear Model
 **Formula:**
 ```
 Price(t+1) = Price(t) + α * (Occupancy / Capacity)
@@ -224,7 +224,7 @@ Price(t+1) = Price(t) + α * (Occupancy / Capacity)
 - Acts as a basic reference model.
 - Assumes occupancy directly reflects demand.
 
-### 🟢 Model 2: Demand-Based Pricing
+###  Model 2: Demand-Based Pricing
 **Demand Function:**
 ```
 Demand = α*(Occupancy / Capacity) + β*QueueLength - γ*Traffic + δ*IsSpecialDay + 
@@ -243,10 +243,10 @@ Price = BasePrice * (1 + λ * NormalizedDemand)
 - Congestion reduces demand (difficulty of access)
 - Vehicle types weighted (truck > car > bike)
 
-### 🟠 Model 3: Competitive Pricing Model
+###  Model 3: Competitive Pricing Model
 - Adds geolocation logic (via Haversine distance)
 
-## 📈 Performance Metrics
+##  Performance Metrics
 
 ### Model Evaluation
 - **RMSE**: Root Mean Square Error for price predictions
@@ -261,7 +261,7 @@ Model 2 (Demand):     RMSE: 1.89, Revenue: +28%
 Model 3 (Competitive): RMSE: 1.56, Revenue: +35%
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Key Parameters
 ```python
@@ -283,7 +283,7 @@ PROXIMITY_RADIUS = 1.0  # km
 COMPETITOR_WEIGHT = 0.3
 ```
 
-## 🧪 Testing
+##  Testing
 
 Run the test suite:
 ```bash
@@ -295,7 +295,7 @@ Run specific model tests:
 pytest tests/test_models.py::test_linear_model -v
 ```
 
-## 📊 Monitoring & Analytics
+##  Monitoring & Analytics
 
 ### Real-time Dashboard
 - Live pricing updates
@@ -309,7 +309,7 @@ pytest tests/test_models.py::test_linear_model -v
 - API request monitoring
 - Error tracking
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -318,18 +318,15 @@ pytest tests/test_models.py::test_linear_model -v
 5. Open a Pull Request
 
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - OpenStreetMap for geospatial data
 - Parking industry research papers
 - Machine learning community
 
-## 📧 Contact
+##  Contact
 
 Your Name - Aishi Guin 
 Email - guinaishi@gmail.com
 Project Link: https://github.com/AG-2002/Dynamic-Pricing-for-Urban-Parking-Lots/tree/main
 
----
-
-⭐ If you found this project helpful, please give it a star!
