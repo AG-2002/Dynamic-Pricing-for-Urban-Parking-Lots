@@ -203,6 +203,48 @@ curl -X POST "http://localhost:8000/price" \
     "vehicle_type": "car"
   }'
 ```
+## 📌 Problem Statement
+Urban parking is limited and static pricing often causes underutilization or 
+overcrowding. The objective is to implement a **dynamic pricing engine** for 14 p
+lots using streaming data to:
+- Optimize prices based on demand
+- React to real-time conditions
+- Simulate competitive pricing scenarios
+
+---
+
+## 🧠 Models Implemented
+
+### 🔵 Model 1: Baseline Linear Model
+**Formula:**
+```
+Price(t+1) = Price(t) + α * (Occupancy / Capacity)
+```
+- Linear price increase with utilization.
+- Acts as a basic reference model.
+- Assumes occupancy directly reflects demand.
+
+### 🟢 Model 2: Demand-Based Pricing
+**Demand Function:**
+```
+Demand = α*(Occupancy / Capacity) + β*QueueLength - γ*Traffic + δ*IsSpecialDay + 
+ε*VehicleWeight
+```
+**Price Calculation:**
+```
+Price = BasePrice * (1 + λ * NormalizedDemand)
+```
+- Considers multiple real-world variables: congestion, vehicle type, etc.
+- Demand normalized between [0,1].
+- Price clamped between 0.5x and 2x base price.
+
+**Assumptions:**
+- Queue and special days increase demand
+- Congestion reduces demand (difficulty of access)
+- Vehicle types weighted (truck > car > bike)
+
+### 🟠 Model 3: Competitive Pricing Model
+- Adds geolocation logic (via Haversine distance)
 
 ## 📈 Performance Metrics
 
